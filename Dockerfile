@@ -4,6 +4,6 @@ FROM python:3.7.2-alpine3.8
 #pip install django gunicorn pyscopg2-binary
 #pip instal -r \requirements.txt
 
-pip install django \
+RUN pip install django \
         gunicorn \
         psycopg2-binary
