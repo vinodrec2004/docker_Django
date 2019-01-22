@@ -10,6 +10,4 @@ RUN apk update && \
     apk add --virtual build-deps gcc python-dev musl-dev
 
 
-RUN pip install django && \
-        gunicorn && \
-        psycopg2-binary
+RUN pip install django gunicorn psycopg2-binary
