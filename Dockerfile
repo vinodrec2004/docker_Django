@@ -4,7 +4,12 @@ FROM python:3.7.2-alpine3.8
 #pip install django gunicorn psycopg2-binary
 #pip instal -r \requirements.txt
 
-RUN apk install psycopg2-binary
+RUN mkdir /django
 
-RUN pip install django \
-        gunicorn
+RUN apk update && \
+    apk add --virtual build-deps gcc python-dev mus1-dev
+
+
+RUN pip install django && \
+        gunicorn && \
+        psycopg2-binary
