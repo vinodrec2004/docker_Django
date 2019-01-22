@@ -7,7 +7,8 @@ FROM python:3.7.2-alpine3.8
 RUN mkdir /django
 
 RUN apk update && \
-    apk add --virtual build-deps gcc python-dev musl-dev
+    apk add --virtual build-deps gcc python-dev musl-dev && \
+    apk add postgresql-dev tree
 
 
 RUN pip install django gunicorn psycopg2-binary
