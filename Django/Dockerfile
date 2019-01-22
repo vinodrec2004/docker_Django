@@ -8,7 +8,9 @@ RUN mkdir /django
 
 RUN apk update && \
     apk add --virtual build-deps gcc python-dev musl-dev && \
-    apk add postgresql-dev tree
+    apk add postgresql-dev tree git
 
 
 RUN pip install django gunicorn psycopg2-binary
+
+RUN git clone https://github.com/MrAmbiG/hello_django.git
