@@ -7,7 +7,7 @@ FROM python:3.7.2-alpine3.8
 RUN mkdir /django
 
 RUN apk update && \
-    apk add --virtual build-deps gcc python-dev mus1-dev
+    apk add --virtual build-deps gcc python-dev musl-dev
 
 
 RUN pip install django && \
