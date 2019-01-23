@@ -20,4 +20,6 @@ RUN pip install django gunicorn psycopg2-binary
 #command to run the django server
 CMD python /djangoapp/manage.py runserver
 
+EXPOSE 8000
+
 RUN git clone https://github.com/MrAmbiG/hello_django.git
