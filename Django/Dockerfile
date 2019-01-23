@@ -12,7 +12,7 @@ RUN apk update && \
 
 RUN mkdir flask
 
-COPY flask/ flask/
+COPY /flask flask/
 
 
 RUN pip install django gunicorn psycopg2-binary
