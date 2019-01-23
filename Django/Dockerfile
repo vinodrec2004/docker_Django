@@ -17,4 +17,7 @@ ADD djangoapp /djangoapp
 
 RUN pip install django gunicorn psycopg2-binary
 
+#command to run the django server
+CMD python .\manage.py runserver
+
 RUN git clone https://github.com/MrAmbiG/hello_django.git
