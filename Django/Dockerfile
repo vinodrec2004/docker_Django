@@ -10,7 +10,7 @@ RUN apk update && \
     apk add --virtual build-deps gcc python-dev musl-dev && \
     apk add postgresql-dev tree git
 
-RUN mkdir /flask
+RUN mkdir flask
 
 ADD flask/ flask/
 
