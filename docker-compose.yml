@@ -4,15 +4,16 @@ services:
     build: ./Django
     ports:
      - "8000:8000"
-    network:
+    networks:
       - backend
+
   postgres:
     build: ./db
     ports:
       - "5432:5432"
-    network:
+    networks:
       - backend
 
 networks:
   backend:
-    driver: bridge      
+    driver: bridge
