@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    build: ./Django
+    ports:
+     - "8000:8000"
+    network:
+      - backend
+  postgres:
+    build: ./db
+    ports:
+      - "5432:5432"
+    network:
+      - backend
+
+networks:
+  backend:
+    driver: bridge      
