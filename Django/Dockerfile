@@ -27,4 +27,7 @@ WORKDIR  /djangoapp
 RUN tree
 
 #RUN git clone https://github.com/MrAmbiG/hello_django.git
+#migrations using command
+CMD ["python", "manage.py", "makemigrations"]
+CMD ["python", "manage.py", "migrate"]
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
