@@ -6,6 +6,9 @@ services:
      - "8000:8000"
     networks:
       - backend
+    volumes:
+      - static_volume:/web/static
+      - media_volume:/web/media
 
   postgres:
     build: ./db
@@ -22,4 +25,6 @@ networks:
 
 volumes:
   postgres-data:
-    driver: local
+  static_volume:
+  media_volume:
+  
